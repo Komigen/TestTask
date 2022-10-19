@@ -1,9 +1,7 @@
 import UIKit
 
 class MyCollectionView: UICollectionView {
-    
-    var cells = [DataModel]()
-    
+        
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -34,13 +32,14 @@ extension MyCollectionView: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: CollectionViewCell.cellId, for: indexPath) as! CollectionViewCell
+//        cell.headerLabel.text =
+//        cell.imageView.loadmagePost(stringUrl: <#T##String#>)
         
         return cell
     }
 }
 
 extension MyCollectionView: UICollectionViewDelegateFlowLayout {
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: Constants.cellWidth, height: frame.height)
@@ -55,15 +54,14 @@ extension MyCollectionView {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         
-        UIView.animate(withDuration: 0.3,
+        UIView.animate(withDuration: 0.2,
                        animations: {
-            cell?.alpha = 0.5
+            cell?.alpha = 0.7
         }) { (completed) in
-            UIView.animate(withDuration: 0.3,
+            UIView.animate(withDuration: 0.2,
                            animations: {
                 cell?.alpha = 1
             })
         }
-        
     }
 }

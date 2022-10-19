@@ -5,13 +5,12 @@ struct DataModel: Codable {
 }
 
 struct Section: Codable {
-    let id, header: String
+    let header: String
     let itemsTotal, itemsToShow: Int
     let items: [Item]
 }
 
 struct Item: Codable {
-    let id: String
     let image: Image
     let title: String
 }
