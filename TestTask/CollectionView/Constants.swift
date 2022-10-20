@@ -1,7 +1,11 @@
 import UIKit
 
 struct Constants {
-    static let spacingBetweenCollectionView: CGFloat = 60
+    static let leadingLabelSpacing: CGFloat = 35
+    static let topSpacing: CGFloat = 30
+    static let topLabelSpacing: CGFloat = 25
+
+    static let topCollectionViewSpacing: CGFloat = 10
     static let heightCell: CGFloat = 220
     static let leftDistanceToView: CGFloat = 30
     static let rightDistanceToView: CGFloat = 30

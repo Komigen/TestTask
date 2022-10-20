@@ -1,16 +1,20 @@
 import Foundation
 
-class JsonManager {
-    
-    func loadJson() -> [Section]? {
+final class JsonManager {
+
+    func loadJson() -> [Section] {
         
-        let decoder = JSONDecoder()
-        guard let url = Bundle.main.url(forResource: "jsonviewer", withExtension: "json"),
-        let data = try? Data(contentsOf: url),
-        let result = try? decoder.decode(DataModel.self, from: data)
-        else { return nil }
-        
+        guard let url = Bundle.main.url(forResource: "jsonviewer", withExtension: "json") else { return [] }
+        guard let data = try? Data(contentsOf: url) else { return [] }
+        guard let result = try? JSONDecoder().decode(DataModel.self, from: data) else { return [] }
+                
         print("JSON decoding success")
         return result.sections
     }
+    
+    func getItems(sections: [Section]) -> [Item] {
+        sections.first?.items ?? []
+    }
 }
+
+

@@ -1,6 +1,6 @@
 import UIKit
 
-class MyCollectionView: UICollectionView {
+class CustomCollectionView: UICollectionView {
         
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -14,7 +14,7 @@ class MyCollectionView: UICollectionView {
         contentInset = UIEdgeInsets(top: 0, left: Constants.leftDistanceToView, bottom: 0, right: Constants.rightDistanceToView)
         showsHorizontalScrollIndicator = false
         
-        register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.cellId)
+        register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.cellId)
     }
     
     required init?(coder: NSCoder) {
@@ -24,22 +24,20 @@ class MyCollectionView: UICollectionView {
 
 //MARK: Extensions
 
-extension MyCollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+extension CustomCollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return 7
+        return 3
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: CollectionViewCell.cellId, for: indexPath) as! CollectionViewCell
-//        cell.headerLabel.text =
-//        cell.imageView.loadmagePost(stringUrl: <#T##String#>)
-        
+        let cell = dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellId, for: indexPath) as! CustomCollectionViewCell
+
         return cell
     }
 }
 
-extension MyCollectionView: UICollectionViewDelegateFlowLayout {
+extension CustomCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: Constants.cellWidth, height: frame.height)
@@ -49,7 +47,7 @@ extension MyCollectionView: UICollectionViewDelegateFlowLayout {
 
 //MARK: Animations - Briefly fade the cell on selection
 
-extension MyCollectionView {
+extension CustomCollectionView {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)

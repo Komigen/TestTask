@@ -1,6 +1,6 @@
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class CustomCollectionViewCell: UICollectionViewCell {
     
     static let cellId = "CollectionViewCell"
     
@@ -13,7 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    let headerLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 46/255, green: 68/255, blue: 111/255, alpha: 0.95)
         label.font = UIFont(name: "Arial Rounded MT Bold", size: 17.0)
@@ -24,7 +24,7 @@ class CollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private let viewForHeader: UIView = {
+    private let viewForTitle: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 22
         view.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
@@ -38,12 +38,12 @@ class CollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         addSubview(imageView)
-        imageView.addSubview(viewForHeader)
-        viewForHeader.addSubview(headerLabel)
+        imageView.addSubview(viewForTitle)
+        viewForTitle.addSubview(titleLabel)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        viewForHeader.translatesAutoresizingMaskIntoConstraints = false
-        headerLabel.translatesAutoresizingMaskIntoConstraints = false
+        viewForTitle.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -51,15 +51,15 @@ class CollectionViewCell: UICollectionViewCell {
             imageView.topAnchor.constraint(equalTo: topAnchor),
             imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            viewForHeader.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
-            viewForHeader.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
-            viewForHeader.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 135),
-            viewForHeader.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
+            viewForTitle.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
+            viewForTitle.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+            viewForTitle.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 135),
+            viewForTitle.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
             
-            headerLabel.leadingAnchor.constraint(equalTo: viewForHeader.leadingAnchor, constant: 12),
-            headerLabel.trailingAnchor.constraint(equalTo: viewForHeader.trailingAnchor, constant: -12),
-            headerLabel.topAnchor.constraint(equalTo: viewForHeader.topAnchor, constant: 10),
-            headerLabel.bottomAnchor.constraint(equalTo: viewForHeader.bottomAnchor, constant: -10)
+            titleLabel.leadingAnchor.constraint(equalTo: viewForTitle.leadingAnchor, constant: 12),
+            titleLabel.trailingAnchor.constraint(equalTo: viewForTitle.trailingAnchor, constant: -12),
+            titleLabel.topAnchor.constraint(equalTo: viewForTitle.topAnchor, constant: 10),
+            titleLabel.bottomAnchor.constraint(equalTo: viewForTitle.bottomAnchor, constant: -10)
         ])
         
     }
