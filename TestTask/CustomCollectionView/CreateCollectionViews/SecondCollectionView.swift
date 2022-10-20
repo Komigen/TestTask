@@ -1,18 +1,19 @@
 import UIKit
 
-final class FourthCollectionView: CustomCollectionView {
+final class SecondCollectionView: CustomCollectionView {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fourthItemsArray.count
+        return secondItemsArray.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellId, for: indexPath) as! CustomCollectionViewCell
-        let item = fourthItemsArray[indexPath.row]
+        let item = secondItemsArray[indexPath.row]
         
         cell.titleLabel.text = item.title
-        cell.imageView.loadmagePost(stringUrl: item.image.the1X)
+        cell.imageView.loadmagePost(stringUrl: UrlImages.second.rawValue)
         
         return cell
     }
 }
+

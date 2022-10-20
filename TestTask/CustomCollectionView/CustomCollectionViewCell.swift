@@ -9,6 +9,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
         imageView.backgroundColor = .white
         imageView.layer.cornerRadius = 22
         imageView.layer.borderColor = CGColor(red: 101/255, green: 129/255, blue: 247/255, alpha: 0.5)
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         
         return imageView
     }()

@@ -11,7 +11,7 @@ final class FirstCollectionView: CustomCollectionView {
         let item = firstItemsArray[indexPath.row]
         
         cell.titleLabel.text = item.title
-        cell.imageView.loadmagePost(stringUrl: item.image.the1X)
+        cell.imageView.loadmagePost(stringUrl: UrlImages.first.rawValue)
         
         return cell
     }

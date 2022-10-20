@@ -1,5 +1,7 @@
 import Foundation
 
+//MARK: JSON Model
+
 struct DataModel: Decodable {
     let sections: [Section]
 }

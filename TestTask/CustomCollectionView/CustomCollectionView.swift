@@ -2,7 +2,7 @@ import UIKit
 
 class CustomCollectionView: UICollectionView {
         
-    init() {
+   init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         super.init(frame: .zero, collectionViewLayout: layout)

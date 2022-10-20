@@ -20,11 +20,12 @@
 		B5DD9DE728FF33EB000A380C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DE628FF33EB000A380C /* Constants.swift */; };
 		B5DD9DEC29000F7D000A380C /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DEB29000F7D000A380C /* JSONManager.swift */; };
 		B5DD9DF329002B11000A380C /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DF229002B11000A380C /* LoadImage.swift */; };
-		B5DD9DF829007D47000A380C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DF729007D47000A380C /* File.swift */; };
 		B5DD9DFA29014528000A380C /* FirstCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DF929014528000A380C /* FirstCollectionView.swift */; };
 		B5DD9DFD29014803000A380C /* SecondCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DFC29014803000A380C /* SecondCollectionView.swift */; };
 		B5DD9DFF29014849000A380C /* ThirdCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DFE29014849000A380C /* ThirdCollectionView.swift */; };
 		B5DD9E0129014891000A380C /* FourthCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9E0029014891000A380C /* FourthCollectionView.swift */; };
+		B5DD9E0C2901580B000A380C /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9E0B2901580B000A380C /* UILabel.swift */; };
+		B5DD9E0E29016495000A380C /* UrlImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9E0D29016495000A380C /* UrlImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,11 +44,12 @@
 		B5DD9DE628FF33EB000A380C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B5DD9DEB29000F7D000A380C /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		B5DD9DF229002B11000A380C /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
-		B5DD9DF729007D47000A380C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		B5DD9DF929014528000A380C /* FirstCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionView.swift; sourceTree = "<group>"; };
 		B5DD9DFC29014803000A380C /* SecondCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionView.swift; sourceTree = "<group>"; };
 		B5DD9DFE29014849000A380C /* ThirdCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionView.swift; sourceTree = "<group>"; };
 		B5DD9E0029014891000A380C /* FourthCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthCollectionView.swift; sourceTree = "<group>"; };
+		B5DD9E0B2901580B000A380C /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		B5DD9E0D29016495000A380C /* UrlImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,7 @@
 				B5DD9DF429002B17000A380C /* Extensions */,
 				B5DD9DF029002A0E000A380C /* SupportFiles */,
 				B5DD9DF129002A1E000A380C /* MainViewController */,
-				B5DD9DEA28FF3483000A380C /* CollectionView */,
+				B5DD9DEA28FF3483000A380C /* CustomCollectionView */,
 				B5DD9DEF290029ED000A380C /* JSONManager */,
 				B5DD9DCE28FEFD6D000A380C /* Main.storyboard */,
 				B5DD9DD128FEFD6E000A380C /* Assets.xcassets */,
@@ -94,15 +96,15 @@
 			path = TestTask;
 			sourceTree = "<group>";
 		};
-		B5DD9DEA28FF3483000A380C /* CollectionView */ = {
+		B5DD9DEA28FF3483000A380C /* CustomCollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				B5DD9DDE28FF16DA000A380C /* CustomCollectionView.swift */,
-				B5DD9DE628FF33EB000A380C /* Constants.swift */,
 				B5DD9DE228FF18C5000A380C /* CustomCollectionViewCell.swift */,
-				B5DD9DFB2901452E000A380C /* CollectionViews */,
+				B5DD9DE628FF33EB000A380C /* Constants.swift */,
+				B5DD9DFB2901452E000A380C /* CreateCollectionViews */,
 			);
-			path = CollectionView;
+			path = CustomCollectionView;
 			sourceTree = "<group>";
 		};
 		B5DD9DEF290029ED000A380C /* JSONManager */ = {
@@ -110,7 +112,7 @@
 			children = (
 				B5DD9DEB29000F7D000A380C /* JSONManager.swift */,
 				B5DD9DE028FF182C000A380C /* DataModel.swift */,
-				B5DD9DF729007D47000A380C /* File.swift */,
+				B5DD9E0D29016495000A380C /* UrlImages.swift */,
 			);
 			path = JSONManager;
 			sourceTree = "<group>";
@@ -136,11 +138,12 @@
 			isa = PBXGroup;
 			children = (
 				B5DD9DF229002B11000A380C /* LoadImage.swift */,
+				B5DD9E0B2901580B000A380C /* UILabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B5DD9DFB2901452E000A380C /* CollectionViews */ = {
+		B5DD9DFB2901452E000A380C /* CreateCollectionViews */ = {
 			isa = PBXGroup;
 			children = (
 				B5DD9DF929014528000A380C /* FirstCollectionView.swift */,
@@ -148,7 +151,7 @@
 				B5DD9DFE29014849000A380C /* ThirdCollectionView.swift */,
 				B5DD9E0029014891000A380C /* FourthCollectionView.swift */,
 			);
-			path = CollectionViews;
+			path = CreateCollectionViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,13 +229,14 @@
 				B5DD9DCD28FEFD6D000A380C /* ViewController.swift in Sources */,
 				B5DD9DC928FEFD6D000A380C /* AppDelegate.swift in Sources */,
 				B5DD9DE328FF18C5000A380C /* CustomCollectionViewCell.swift in Sources */,
+				B5DD9E0E29016495000A380C /* UrlImages.swift in Sources */,
 				B5DD9DE128FF182C000A380C /* DataModel.swift in Sources */,
 				B5DD9DE728FF33EB000A380C /* Constants.swift in Sources */,
-				B5DD9DF829007D47000A380C /* File.swift in Sources */,
 				B5DD9DDF28FF16DA000A380C /* CustomCollectionView.swift in Sources */,
 				B5DD9DF329002B11000A380C /* LoadImage.swift in Sources */,
 				B5DD9DFD29014803000A380C /* SecondCollectionView.swift in Sources */,
 				B5DD9DEC29000F7D000A380C /* JSONManager.swift in Sources */,
+				B5DD9E0C2901580B000A380C /* UILabel.swift in Sources */,
 				B5DD9DFA29014528000A380C /* FirstCollectionView.swift in Sources */,
 				B5DD9DFF29014849000A380C /* ThirdCollectionView.swift in Sources */,
 				B5DD9E0129014891000A380C /* FourthCollectionView.swift in Sources */,

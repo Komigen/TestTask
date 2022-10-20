@@ -11,7 +11,7 @@ final class ThirdCollectionView: CustomCollectionView {
         let item = thirdItemsArray[indexPath.row]
         
         cell.titleLabel.text = item.title
-        cell.imageView.loadmagePost(stringUrl: item.image.the1X)
+        cell.imageView.loadmagePost(stringUrl: UrlImages.third.rawValue)
         
         return cell
     }
