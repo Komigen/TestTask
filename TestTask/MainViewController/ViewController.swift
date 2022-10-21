@@ -1,11 +1,5 @@
 import UIKit
 
-var sectionsArray: [Section]!
-var firstItemsArray: [Item]!
-var secondItemsArray: [Item]!
-var thirdItemsArray: [Item]!
-var fourthItemsArray: [Item]!
-
 final class ViewController: UIViewController {
         
     private var scrollView = UIScrollView()
@@ -19,6 +13,14 @@ final class ViewController: UIViewController {
     private var thirdLabel = UILabel().customLabel
     private var fourthLabel = UILabel().customLabel
 
+    //MARK: Stored decoded data
+    
+    static var sectionsArray: [Section]!
+    static var firstItemsArray: [Item]!
+    static var secondItemsArray: [Item]!
+    static var thirdItemsArray: [Item]!
+    static var fourthItemsArray: [Item]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,22 +35,22 @@ final class ViewController: UIViewController {
         scrollView.addSubview(fourthCollectionView)
 
         createUiElements()
-        sectionsArray = JsonManager().loadJson()
+        ViewController.sectionsArray = JsonManager().loadJson()
 
-        for (index, section) in sectionsArray.enumerated() {
+        for (index, section) in ViewController.sectionsArray.enumerated() {
             switch index {
             case 0:
                 firstLabel.text = section.header
-                firstItemsArray = section.items
+                ViewController.firstItemsArray = section.items
             case 1:
                 secondLabel.text = section.header
-                secondItemsArray = section.items
+                ViewController.secondItemsArray = section.items
             case 2:
                 thirdLabel.text = section.header
-                thirdItemsArray = section.items
+                ViewController.thirdItemsArray = section.items
             case 3:
                 fourthLabel.text = section.header
-                fourthItemsArray = section.items
+                ViewController.fourthItemsArray = section.items
             default:
                 break
             }
@@ -57,7 +59,7 @@ final class ViewController: UIViewController {
     
     //MARK: Create CollectionView
 
-    func createUiElements() {
+   private func createUiElements() {
         
         view.backgroundColor = UIColor(red: 226/255, green: 246/255, blue: 246/255, alpha: 1)
         scrollView.backgroundColor = view.backgroundColor
