@@ -51,6 +51,5 @@ struct NewStruct: Codable {
         self.the1X = section?.items.first?.image.the1X
         self.the2X = section?.items.first?.image.the2X
         self.the3X = section?.items.first?.image.the3X
-
     }
 }

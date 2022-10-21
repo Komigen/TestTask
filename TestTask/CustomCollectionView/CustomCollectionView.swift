@@ -10,8 +10,8 @@ class CustomCollectionView: UICollectionView {
         backgroundColor = .clear
         delegate = self
         dataSource = self
-        layout.minimumLineSpacing = Constants.minimumLineSpacing
-        contentInset = UIEdgeInsets(top: 0, left: Constants.leftDistanceToView, bottom: 0, right: Constants.rightDistanceToView)
+        layout.minimumLineSpacing = SupportSizes.minimumLineSpacing
+        contentInset = UIEdgeInsets(top: 0, left: SupportSizes.leftDistanceToView, bottom: 0, right: SupportSizes.rightDistanceToView)
         showsHorizontalScrollIndicator = false
         
         register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.cellId)
@@ -40,7 +40,7 @@ extension CustomCollectionView: UICollectionViewDelegate, UICollectionViewDataSo
 extension CustomCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constants.cellWidth, height: frame.height)
+        return CGSize(width: SupportSizes.cellWidth, height: frame.height)
     }
 }
 

@@ -11,10 +11,6 @@ final class JsonManager {
         print("JSON decoding success")
         return result.sections
     }
-    
-    func getItems(sections: [Section]) -> [Item] {
-        sections.first?.items ?? []
-    }
 }
 
 

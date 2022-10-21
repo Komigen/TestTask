@@ -1,5 +1,7 @@
 import Foundation
 
+//MARK: т.к. доступ к image по ссылкам из файла jsonviewer закрыт, для демонстрации были выбраны другие:
+
 enum UrlImages: String {
     case first = "https://img.freepik.com/free-vector/healthy-breakfast-meals-set-flat-illustration_74855-14424.jpg?w=2000&t=st=1666263916~exp=1666264516~hmac=daeb0f81345b666b7670a0f16144bc82ccd5381a7ac0616027e51ee9df09ad90"
     case second = "https://img.freepik.com/premium-vector/borsch-food-vector-illustration_651749-4.jpg?w=1380"

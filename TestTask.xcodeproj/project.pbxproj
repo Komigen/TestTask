@@ -17,7 +17,7 @@
 		B5DD9DDF28FF16DA000A380C /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DDE28FF16DA000A380C /* CustomCollectionView.swift */; };
 		B5DD9DE128FF182C000A380C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DE028FF182C000A380C /* DataModel.swift */; };
 		B5DD9DE328FF18C5000A380C /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DE228FF18C5000A380C /* CustomCollectionViewCell.swift */; };
-		B5DD9DE728FF33EB000A380C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DE628FF33EB000A380C /* Constants.swift */; };
+		B5DD9DE728FF33EB000A380C /* SupportSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DE628FF33EB000A380C /* SupportSizes.swift */; };
 		B5DD9DEC29000F7D000A380C /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DEB29000F7D000A380C /* JSONManager.swift */; };
 		B5DD9DF329002B11000A380C /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DF229002B11000A380C /* LoadImage.swift */; };
 		B5DD9DFA29014528000A380C /* FirstCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DD9DF929014528000A380C /* FirstCollectionView.swift */; };
@@ -41,7 +41,7 @@
 		B5DD9DDE28FF16DA000A380C /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		B5DD9DE028FF182C000A380C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B5DD9DE228FF18C5000A380C /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		B5DD9DE628FF33EB000A380C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B5DD9DE628FF33EB000A380C /* SupportSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportSizes.swift; sourceTree = "<group>"; };
 		B5DD9DEB29000F7D000A380C /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		B5DD9DF229002B11000A380C /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		B5DD9DF929014528000A380C /* FirstCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionView.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			children = (
 				B5DD9DDE28FF16DA000A380C /* CustomCollectionView.swift */,
 				B5DD9DE228FF18C5000A380C /* CustomCollectionViewCell.swift */,
-				B5DD9DE628FF33EB000A380C /* Constants.swift */,
+				B5DD9DE628FF33EB000A380C /* SupportSizes.swift */,
 				B5DD9DFB2901452E000A380C /* CreateCollectionViews */,
 			);
 			path = CustomCollectionView;
@@ -231,7 +231,7 @@
 				B5DD9DE328FF18C5000A380C /* CustomCollectionViewCell.swift in Sources */,
 				B5DD9E0E29016495000A380C /* UrlImages.swift in Sources */,
 				B5DD9DE128FF182C000A380C /* DataModel.swift in Sources */,
-				B5DD9DE728FF33EB000A380C /* Constants.swift in Sources */,
+				B5DD9DE728FF33EB000A380C /* SupportSizes.swift in Sources */,
 				B5DD9DDF28FF16DA000A380C /* CustomCollectionView.swift in Sources */,
 				B5DD9DF329002B11000A380C /* LoadImage.swift in Sources */,
 				B5DD9DFD29014803000A380C /* SecondCollectionView.swift in Sources */,

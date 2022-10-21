@@ -63,7 +63,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
             titleLabel.topAnchor.constraint(equalTo: viewForTitle.topAnchor, constant: 10),
             titleLabel.bottomAnchor.constraint(equalTo: viewForTitle.bottomAnchor, constant: -10)
         ])
-        
     }
     
     required init?(coder: NSCoder) {
