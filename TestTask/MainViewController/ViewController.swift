@@ -13,7 +13,7 @@ final class ViewController: UIViewController {
     private var thirdLabel = UILabel().customLabel
     private var fourthLabel = UILabel().customLabel
 
-    //MARK: Stored decoded data
+    //MARK: Arrays for storing decoded data
     
     static var sectionsArray: [Section]!
     static var firstItemsArray: [Item]!
