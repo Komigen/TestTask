@@ -11,7 +11,7 @@ final class FourthCollectionView: CustomCollectionView {
         let item = ViewController.fourthItemsArray[indexPath.row]
         
         cell.titleLabel.text = item.title
-        cell.imageView.loadmagePost(stringUrl: UrlImages.fourth.rawValue)
+        cell.imageView.loadmagePost(stringUrl: urlImagesFourthVC[indexPath.row])
         
         return cell
     }

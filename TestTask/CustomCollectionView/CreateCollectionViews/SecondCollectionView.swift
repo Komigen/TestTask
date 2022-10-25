@@ -11,7 +11,7 @@ final class SecondCollectionView: CustomCollectionView {
         let item = ViewController.secondItemsArray[indexPath.row]
         
         cell.titleLabel.text = item.title
-        cell.imageView.loadmagePost(stringUrl: UrlImages.second.rawValue)
+        cell.imageView.loadmagePost(stringUrl: urlImagesSecondVC[indexPath.row])
         
         return cell
     }
