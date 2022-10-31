@@ -21,6 +21,9 @@ final class ViewController: UIViewController {
     static var thirdItemsArray: [Item]!
     static var fourthItemsArray: [Item]!
     
+    var selectionLimit = 3
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

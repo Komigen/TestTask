@@ -13,7 +13,8 @@ class CustomCollectionView: UICollectionView {
         layout.minimumLineSpacing = SupportSizes.minimumLineSpacing
         contentInset = UIEdgeInsets(top: 0, left: SupportSizes.leftDistanceToView, bottom: 0, right: SupportSizes.rightDistanceToView)
         showsHorizontalScrollIndicator = false
-        
+        allowsMultipleSelection = true
+
         register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.cellId)
     }
     
@@ -34,6 +35,10 @@ extension CustomCollectionView: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.cellId, for: indexPath) as! CustomCollectionViewCell
 
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return collectionView.indexPathsForSelectedItems?.count ?? 0 < 6
     }
 }
 
